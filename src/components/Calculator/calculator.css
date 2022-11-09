@@ -1,0 +1,74 @@
+.calcu {
+  padding: 20px;
+  width: 400px;
+  height: 700px;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: var(--calc-bg);
+  box-shadow: 0 0 29px 0 rgba(100, 100, 111, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: all 0.5s ease;
+}
+
+.calcu.dark {
+  background-color: #b7b7b7;
+  transition: all 0.5s ease;
+}
+
+.calcu-btns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.calcu-btns button {
+  border: 0;
+  outline: none;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  background-color: transparent;
+  font-weight: 600;
+  color: var(--txt-color);
+}
+
+.calcu-btns button:last-child {
+  background-color: #ddd;
+  height: 30px;
+  color: var(--calc-btn-color);
+}
+
+.calcu-btns .btn__op {
+  color: var(--calc-btn-color);
+}
+
+.calcu-result {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.calcu-result__exp {
+  font-size: 3.25rem;
+  line-height: 1;
+  transform-origin:  right bottom;
+  transition: transform 0.3s ease;
+  color: var(--calc-ré-color);
+}
+
+.calcu-result__exp:last-child {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.calcu-result__exp span {
+  display: inline-block;
+  overflow: hidden;
+  transform: width 0.3s ease;
+}
